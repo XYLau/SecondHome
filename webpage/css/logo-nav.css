@@ -1,0 +1,24 @@
+body {
+    margin-top: 100px; /* adjust this if the height of the menu bar changes */
+}
+
+.navbar-fixed-top .nav {
+    padding: 10px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+	padding: 0 10px;
+}
+
+@media(min-width:768px) {
+    .navbar-fixed-top .nav {
+        padding: 5px 0px 0px 20px;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 3px 0px;
+    }
+	.navbar-nav li {
+		padding-left: 70px;
+	}
+}
