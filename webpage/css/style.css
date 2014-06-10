@@ -15,6 +15,14 @@ li a{
 .content{
 	padding-top: 50px;
 }
+
+.footer-right{
+	text-align: right;
+}
+.footer{
+	padding-top: 50px;
+}
+
 .contenthover { padding:20px 20px 10px 20px;}
 .contenthover, .contenthover h3, contenthover a { color:white; text-align:center; padding-top:40px;}
 .contenthover h3, .contenthover p { margin:0 0 10px 0; line-height:1.4em; padding:0;}
