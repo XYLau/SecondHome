@@ -1,7 +1,13 @@
 body {
     margin-top: 100px; /* adjust this if the height of the menu bar changes */
 }
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
 
+.navbar-fixed-top .navbar-brand {
+	padding: 0 15px;
+}
 @media(min-width:768px) {
     .navbar-fixed-top .nav {
         padding: 0px 0px 0px 20px;

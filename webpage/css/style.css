@@ -15,7 +15,9 @@ li a{
 .content{
 	padding-top: 50px;
 }
-
+.row-content{
+	padding-left: 70px;
+}
 .footer-right{
 	text-align: right;
 }
