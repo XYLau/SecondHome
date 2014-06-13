@@ -44,28 +44,75 @@
 				<div class="col-md-3">
 					<img class="img-responsive" src="img/sleepsmall.png"/>
 				</div>
+				
 				<div class="col-md-9">
 					<h3>I wanna SLEEP at</h3>
-					<form class="form-horizontal">
+					<form class="form-horizontal" id="select-faculty">
 						<div class="form-group">
 							<div class="col-sm-4">
-									<select class="form-control" >
-										<option disabled selected>Select your faculty</option>
-										<option>Arts and Social Sciences</option>
-										<option>Business</option>
-										<option>Computing</option>
-										<option>Design and Environment</option>
-										<option>Engineering</option>
-										<option>Music</option>
-										<option>Science</option>
-										<option>Utown</option>
-									</select>
+								<select class="form-control required">
+									<option value="" disabled selected>Select your faculty</option>
+									<option value="1">Arts and Social Sciences</option>
+									<option value="2">Business</option>
+									<option value="3">Computing</option>
+									<option value="4">Design and Environment</option>
+									<option value="5">Engineering</option>
+									<option value="6">Music</option>
+									<option value="7">Science</option>
+									<option value="8">Utown</option>
+								</select>
 				
 							</div>
 						</div>
-						
+						<button class="btn btn-danger" id="toggle" type="submit">GO!</button>
 					</form>
 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="info">
+						<h3 id="table-faculty">[Name of Faculty]</h3>
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th class="col-md-8">Name of Location</th>
+									<th class="col-md-4"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="clickableRow" href="location.html">
+									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
+								</tr>
+								<tr class="clickableRow" href="location.html">
+									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
+								</tr>
+								<tr class="clickableRow" href="location.html">
+									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
+								</tr>
+								<tr class="clickableRow" href="location.html">
+									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
+								</tr>
+								<tr class="clickableRow" href="location.html">
+									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
+								</tr>
+								<tr class="clickableRow" href="location.html">
+									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
+								</tr>
+								<tr class="clickableRow" href="location.html">
+									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
+								</tr>
+								<tr class="clickableRow" href="location.html">
+									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
+								</tr>
+								<tr class="clickableRow" href="location.html">
+									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
+								</tr>
+								
+								
+							<tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -95,8 +142,27 @@
 					overlay_background:'gold',
 					overlay_opacity:1.0
 				});
+				
+				$('#info').hide();
+				
+				$('#select-faculty').validate({ 
+					submitHandler: function(form) {
+						var $info = $('#info');
+						$info.slideDown(400, function() {
+							$('html, body').animate({ 
+								scrollTop: $info.offset().top - 70
+							}, 500);
+						});
+					
+					}
+				});
+				$(".clickableRow").click(function() {
+					window.document.location = $(this).attr("href");
+				});
+				
 			});
 		</script>
+		<script src="dist/jquery.validate.js"></script>
   </body>
 
 </html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+		<link type="text/css" rel="stylesheet" href="css/logo-nav.css"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+		
+		<title>SecondHome</title>
+  </head>
+
+  <body>
+		<!--Navbar
+		======================================================-->
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">
+						<img id="logo" src="img/logosmall.png"/>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="sleep.html" class="nav-options"><i class="fa fa-clock-o"></i> Sleep</a></li>
+						<li><a href="shop.html" class="nav-options"><i class="fa fa-shopping-cart"></i> Shop</a></li>
+						<li><a href="study.html" class="nav-options"><i class="fa fa-graduation-cap"></i> Study</a></li>
+						<li><a href="poop.html" class="nav-options"><span><i class="fa fa-male"></i><i class="fa fa-female"></i></span> Poop</a></li>
+						<li><a href="contact.html" class="nav-options active" ><i class="fa fa-envelope"></i> Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--Faculty Menu
+		======================================================-->
+		
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"
+					<form class="form-inline">
+						<div class="form-group col-sm-3">
+							<select class="form-control required" id="faculty">
+								<option disabled value="">Select your faculty</option>
+								<option value="1">Arts and Social Sciences</option>
+								<option value="2">Business</option>
+								<option selected value="3">Computing</option>
+								<option value="4">Design and Environment</option>
+								<option value="5">Engineering</option>
+								<option value="6">Music</option>
+								<option value="7">Science</option>										
+								<option value="8">Utown</option>
+							</select>
+						</div>
+						<button class="btn btn-danger" type="submit">GO!</button>
+					</form>		
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="hr col-md-12">
+				</div>
+			</div>
+		</div>
+		
+		<!--Content
+		======================================================-->
+		<div class="container">
+			<h2 class="location">[Name of Location]</h2>
+			<div class="row">
+				<div class="col-md-7">	
+					<p>
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+						Information about the location Information about the location Information about the location 
+					</p>
+				</div>
+				<div class="col-md-5">
+				
+					<!--Carousel-->
+					<div id="myCarousel" class="carousel slide">
+					
+						<ol class="carousel-indicators">
+							<li data-target="myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="myCarousel" data-slide-to="1"></li>
+							<li data-target="myCarousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="http://placehold.it/455x250"/>
+							</div>
+							<div class="item">
+								<img src="http://placehold.it/455x250"/>
+							</div>
+							<div class="item">
+								<img src="http://placehold.it/455x250"/>
+							</div>
+						
+						</div>
+						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!--Footer
+		======================================================-->
+		
+		<div class="container footer footer-right">
+			<div class="row">
+				<div class="col-md-12">
+					<br/>
+					<p>Created by Xing Yi and Josephine | Team HopelesslyLost</p>
+					
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/contentHover.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#d1, #d2, #d3, #d4').contenthover({
+					overlay_background:'gold',
+					overlay_opacity:1.0
+				});
+			});
+		</script>
+  </body>
+
+</html>
