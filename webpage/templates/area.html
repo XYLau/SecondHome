@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+		<link type="text/css" rel="stylesheet" href="css/logo-nav.css"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<title>SecondHome</title>
+  </head>
+
+  <body>
+		<!--Navbar
+		======================================================-->
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="/" class="navbar-brand">
+						<img id="logo" src="img/logosmall.png"/>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a id="study" href="/study" class="nav-options"><i class="fa fa-graduation-cap"></i> Study</a></li>
+						<li><a id="shop" href="/shop" class="nav-options"><i class="fa fa-shopping-cart"></i> Shop</a></li>
+						<li><a id="poop" href="/poop" class="nav-options"><span><i class="fa fa-male"></i><i class="fa fa-female"></i></span> Poop</a></li>
+						<li><a href="/contact" class="nav-options" ><i class="fa fa-envelope"></i> Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		{% block sidebar %}
+		{% endblock %}
+		<!--Faculty Menu
+		======================================================-->
+		
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>{{Area.faculty|upper}}</h1>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="hr col-md-12">
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<!--Content
+		======================================================-->
+		<div class="container">
+			<h2 class="location">{{Area.area}}</h2>
+			<div class="row">
+					{% block content %}
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!--Footer
+		======================================================-->
+		
+		<div class="container footer footer-right">
+			<div class="row">
+				<div class="col-md-12">
+					<br/>
+					<p>Created by Xing Yi and Josephine | Team HopelesslyLost</p>
+					
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#{{activity|lower}}").parent().addClass("active");
+				$('.sidebar').hover(function() {
+					$(this).stop().animate({right: '-20px'});
+					$(this).find('.pull').stop().fadeOut();
+					$(this).find('.select-faculty').stop().fadeIn();
+				}, function() {
+					$(this).stop().animate({right: '-260px'});
+					$(this).find('.pull').stop().fadeIn();
+					$(this).find('.select-faculty').stop().fadeOut();
+				});
+			});
+		</script>
+  </body>
+
+</html>

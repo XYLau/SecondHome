@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/logo-nav.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+		<title>SecondHome</title>
+  </head>
+
+  <body>
+		<!--Navbar
+		======================================================-->
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="/" class="navbar-brand">
+						<img class="img-responsive" id="logo" src="img/logosmall.png"/>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/study" class="nav-options"><i class="fa fa-graduation-cap"></i> Study</a></li>
+						<li><a href="/shop" class="nav-options"><i class="fa fa-shopping-cart"></i> Shop</a></li>
+						<li><a href="/poop" class="nav-options"><span><i class="fa fa-male"></i><i class="fa fa-female"></i></span> Poop</a></li>
+						<li><a href="/contact" class="nav-options"><i class="fa fa-envelope"></i> Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--Content
+		======================================================-->
+		<div class="container">
+			<div class="row row-content">
+				<h3>Click on an icon below to get started!</h3>
+				<div class="col-sm-6 col-md-4 content">
+					<a href="/study">
+						<img class="img-responsive icons" src="img/studysmall.png"/>
+					</a>
+					<p class="icon-label">Study</p>
+				</div>
+				<div class="col-sm-6 col-md-4 content">
+					<a href="/shop">
+						<img class="img-responsive icons" src="img/shopsmall.png"/>
+					</a>
+					<p class="icon-label">Shop</p>
+				</div>
+				<div class="col-sm-6 col-md-4 content">
+					<a href="/poop">
+						<img class="img-responsive icons" src="img/poopsmall.png"/>
+					</a>
+					<p class="icon-label">Poop</p>
+				</div>
+			</div>
+		</div>
+
+		
+		
+		<!--Footer
+		======================================================-->
+		
+		<div class="container footer footer-right">
+			<div class="row">
+				<div class="col-md-12">
+					<p><a href ="/add">Click this Link to add stuff to database</a><p>
+					<p><a href="/more-info">About this website</a></p>
+					<br>
+					<p>Created by Xing Yi and Josephine | Team HopelesslyLost</p>
+					
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.icons').hover(function() {
+					$(this).css("border","2px gold solid");
+					}, function() {
+					$(this).css("border","2px white solid");
+				});
+
+			});
+		</script>
+  </body>
+
+</html>

@@ -1,0 +1,60 @@
+{% extends 'area.html' %}
+{% block sidebar %}
+<!--Sidebar 1
+======================================================-->
+<div class="sidebar" id="sidebar1">
+	<p class="pull" id="pull2">Choose another faculty!</p>
+	<form hidden class="form-horizontal select-faculty" method="get" action="/shop-choose">
+		<h4>Choose another faculty!</h4>
+		<div class="form-group">
+			<select class="form-control" id="select-pull" name="shop-select">
+				<option value="everywhere">EVERYWHERE</option>
+				<option value="arts and social sciences">Arts and Social Sciences</option>
+				<option value="business">Business</option>
+				<option value="computing">Computing</option>
+				<option value="design and environment">Design and Environment</option>
+				<option value="engineering">Engineering</option>
+				<option value="music">Music</option>
+				<option value="science">Science</option>
+				<option value="utown">Utown</option>
+			</select>
+		</div>
+		<h4>Filter by:</h4>
+			<div class="form-group shop-type">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="wantsBazaars"> Bazaars
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="wantsFood"> Food Outlets
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="wantsBooks"> Bookshops
+					</label>
+				</div>
+			</div>
+		<button class="btn btn-danger" id="toggle" type="submit">GO!</button>
+		<button class="btn btn-default" id="toggle" type="reset">Clear</button>
+	</form>
+</div>
+{% endblock %}
+{% block content %}
+{% if Area.shopType=="bazaar" %}
+<div class="col-md-12">
+	<img class="img img-responsive poster" src="{{Area.image2}}"/>
+</div>
+
+{% else %}
+<div class="col-md-7">
+	<h3>{{Area.shopname}}</h3>
+	<p>{{Area.shopDesc}}<p>
+</div>
+<div class="col-md-5">
+	<img class="img img-responsive" src="{{Area.image1}}"/>
+</div>
+{% endif %}
+{% endblock %}

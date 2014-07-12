@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/logo-nav.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<title>SecondHome</title>
+  </head>
+
+  <body>
+		<!--Navbar
+		======================================================-->
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="/" class="navbar-brand">
+						<img id="logo" src="img/logosmall.png"/>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/study" class="nav-options"><i class="fa fa-graduation-cap"></i> Study</a></li>
+						<li><a href="/shop" class="nav-options"><i class="fa fa-shopping-cart"></i> Shop</a></li>
+						<li><a href="/poop" class="nav-options"><span><i class="fa fa-male"></i><i class="fa fa-female"></i></span> Poop</a></li>
+						<li><a href="/contact" class="nav-options"><i class="fa fa-envelope"></i> Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--Content
+		======================================================-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<img class="img-responsive" src="img/studysmall.png"/>
+				</div>
+				
+				<div class="col-md-9">
+					<h3>I wanna STUDY at</h3>
+					<form class="form-horizontal" method="get" action="/study-choose">
+						<div class="form-group">
+							<div class="col-sm-4">
+								<select class="form-control" name="study-select">
+									<option value="everywhere">EVERYWHERE</option>
+									<option value="arts and social sciences">Arts and Social Sciences</option>
+									<option value="business">Business</option>
+									<option value="computing">Computing</option>
+									<option value="design and environment">Design and Environment</option>
+									<option value="engineering">Engineering</option>
+									<option value="music">Music</option>
+									<option value="science">Science</option>
+									<option value="utown">Utown</option>
+								</select>
+				
+							</div>
+						</div>
+						<h3>Filter by:</h3>
+						<div class="form-group amenities">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="wantsChairs"> Chairs
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="wantsSofas"> Sofas
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="wantsTables"> Tables
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="wantsSockets"> Sockets
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="wantsAircon"> Air-Conditioning
+								</label>
+							</div>
+						</div>
+						<button class="btn btn-danger" id="toggle" type="submit">Show me where!</button>
+						<button class="btn btn-default" id="toggle" type="reset">Clear Selection</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+
+		
+		
+		<!--Footer
+		======================================================-->
+		
+		<div class="container footer footer-right">
+			<div class="row">
+				<div class="col-md-12">
+					<br/>
+					<p>Created by Xing Yi and Josephine | Team HopelesslyLost</p>
+					
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/contentHover.js"></script>
+  </body>
+
+</html>

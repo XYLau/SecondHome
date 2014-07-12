@@ -1,0 +1,38 @@
+{% extends 'area.html' %}
+{% block sidebar %}
+<!--Sidebar 2
+======================================================-->
+<div class="sidebar" id="sidebar1">
+	<p class="pull" id="pull2">Choose another faculty!</p>
+	<form hidden class="form-horizontal select-faculty" method="get" action="/poop-choose">
+		<h4>Choose another faculty!</h4>
+		<div class="form-group">
+			<select class="form-control" id="select-pull" name="poop-select">
+				<option value="everywhere">EVERYWHERE</option>
+				<option value="arts and social sciences">Arts and Social Sciences</option>
+				<option value="business">Business</option>
+				<option value="computing">Computing</option>
+				<option value="design and environment">Design and Environment</option>
+				<option value="engineering">Engineering</option>
+				<option value="music">Music</option>
+				<option value="science">Science</option>
+				<option value="utown">Utown</option>
+			</select>		
+		</div>
+		<button class="btn btn-danger" id="toggle" type="submit">GO!</button>
+		<button class="btn btn-default" id="toggle" type="reset">Clear</button>
+	</form>
+</div>
+{% endblock %}
+{% block content %}
+<div class="col-md-3">
+	<h3 class="text-center">LADIES</h3>
+</div>
+<div class="col-md-6">
+	<img class="img img-responsive" src="http://upload.wikimedia.org/wikipedia/commons/c/c7/Bathroom-gender-sign.png"/>
+</div>
+<div class="col-md-3">
+	<h3 class="text-center">GENTS</h3>
+</div>
+
+{% endblock %}

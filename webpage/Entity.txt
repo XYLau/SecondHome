@@ -1,0 +1,17 @@
+Entity is Location
+
+Faculty String
+
+Area String
+
+Sleep Bool
+Shop Bool
+Study Bool
+Poop Bool
+
+Sofas Int
+Tables Int
+Sockets Int
+Beds Int
+Shops Int
+Toilets Int

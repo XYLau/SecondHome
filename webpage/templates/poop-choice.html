@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/logo-nav.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="css/style-sleep.css"/>
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<title>SecondHome</title>
+  </head>
+
+  <body>
+		<!--Navbar
+		======================================================-->
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="/" class="navbar-brand">
+						<img id="logo" src="img/logosmall.png"/>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/study" class="nav-options"><i class="fa fa-graduation-cap"></i> Study</a></li>
+						<li><a href="/shop" class="nav-options"><i class="fa fa-shopping-cart"></i> Shop</a></li>
+
+						<li class="active"><a href="/poop" class="nav-options"><span><i class="fa fa-male"></i><i class="fa fa-female"></i></span> Poop</a></li>
+						<li><a href="/contact" class="nav-options"><i class="fa fa-envelope"></i> Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--Sidebar 1
+		======================================================-->
+		<div class="sidebar" id="sidebar1">
+			<p class="pull" id="pull1">Sort By</p>
+			<form hidden class="form-horizontal select-faculty" method="get" action="/poop-sort">
+				<h4>Sort By</h4>
+				<div class="form-group">
+					<select class="form-control" id="select-sort" name="poop-sort">
+						<option value="alphabetical order">Alphabetical Order</option>
+						<option value="cleanliness">Cleanliness</option>
+						<option value="urinals">Total number of urinals</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<div class="radio">
+					  <label>
+						<input type="radio" name="order-poop" value="ascending order" checked>
+						Ascending Order
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+						<input type="radio" name="order-poop" value="descending order">
+						Descending Order
+					  </label>
+					</div>
+				</div>
+				
+				<input name="poop-select" type="hidden" value="{{faculty_name|lower}}">
+
+				
+				<button class="btn btn-danger" id="toggle" type="submit">Sort</button>
+				<button class="btn btn-default" id="toggle" type="reset">Clear</button>
+			</form>
+		</div>
+		
+		<!--Sidebar 2
+		======================================================-->
+		<div class="sidebar" id="sidebar2">
+			<p class="pull" id="pull2">Choose another faculty!</p>
+			<form hidden class="form-horizontal select-faculty" method="get" action="/poop-choose">
+				<h4>Choose another faculty!</h4>
+				<div class="form-group">
+					<select class="form-control" id="select-pull" name="poop-select">
+						<option value="everywhere">EVERYWHERE</option>
+						<option value="arts and social sciences">Arts and Social Sciences</option>
+						<option value="business">Business</option>
+						<option value="computing">Computing</option>
+						<option value="design and environment">Design and Environment</option>
+						<option value="engineering">Engineering</option>
+						<option value="music">Music</option>
+						<option value="science">Science</option>
+						<option value="utown">Utown</option>
+					</select>		
+				</div>
+				<button class="btn btn-danger" id="toggle" type="submit">GO!</button>
+				<button class="btn btn-default" id="toggle" type="reset">Clear</button>
+			</form>
+		</div>
+		
+		<!--Content
+		======================================================-->
+		<div class="container">
+			<div class="row row-header">
+				<div class="col-md-12">
+					<h1>{{ faculty_name }}</h1>
+				</div>
+			</div>
+			{%if locations|length > 0 %}
+			{% for location in locations %}		
+			<div class="row row-table row-valid">
+				<div class="col-md-7">
+					<h4>{{ location.area }}</h4>
+					<h4>Overall cleanliness: {{location.cleanliness}} out of 10</h4>
+					<h4>Total number of urinals: {{ location.total }}</h4>
+				</div>
+				<div class="col-md-5">
+					<img src="{{location.image1}}"/>
+				</div>
+				<form action="/submit-poop-area" method="get">
+					<input name="poop-area" type="hidden" value="{{location.area}}">
+				</form>
+			</div>
+			{% endfor %}
+			{% else %}
+			<div class="row row-table">
+				<div class="col-md-12">
+					<h4>This faculty has no suitable areas for this activity</h4>
+				</div>
+			</div>					
+			{% endif %}					
+		</div>
+
+		
+		
+		<!--Footer
+		======================================================-->
+		
+		<div class="container footer footer-right">
+			<div class="row">
+				<div class="col-md-12">
+					<br/>
+					<p>Created by Xing Yi and Josephine | Team HopelesslyLost</p>
+					
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/contentHover.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.row-valid').click(function() {
+					$(this).children('form').submit();
+				});
+				$('.sidebar').hover(function() {
+					$(this).stop().animate({right: '-20px'});
+					$(this).find('.pull').stop().fadeOut();
+					$(this).find('.select-faculty').stop().fadeIn();
+				}, function() {
+					$(this).stop().animate({right: '-260px'});
+					$(this).find('.pull').stop().fadeIn();
+					$(this).find('.select-faculty').stop().fadeOut();
+				});
+			});
+		</script>
+  </body>
+
+</html>

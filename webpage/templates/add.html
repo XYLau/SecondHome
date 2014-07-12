@@ -1,0 +1,170 @@
+<html>
+	<head>
+		<title>Database Editor for Study</title>
+		<style>
+			table, td {
+				border: 1px solid grey;
+				font-size: 20px;
+				font-family: Calibri;
+				text-align: center;
+			}
+			body {
+				overflow-x: auto;
+			}
+			.head {
+				font-weight: bold;
+			}
+		</style>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+	</head>
+	</body>
+		<div class="add">
+			<h1>Study</h1>
+			<a href="/">Click this Link to return to SecondHome</a>
+			<form action="/edit-study" method="post">
+				<h2>Select one of the faculties and <br>enter the name of the area</h2>
+				<select name="select1">
+					<option value="arts and social sciences">Arts and Social Sciences</option>
+					<option value="business">Business</option>
+					<option value="computing">Computing</option>
+					<option value="design and environment">Design and Environment</option>
+					<option value="engineering">Engineering</option>
+					<option value="music">Music</option>
+					<option value="science">Science</option>
+					<option value="utown">Utown</option>
+				</select> Faculty Select<br>
+				<input name="input2" type="text" placeholder="Area"> Area Input<br><br>
+				
+				<h2>Check the boxes which have areas nearby to this study area</h2>
+				<input name="input3" type="checkbox" placeholder="Shop"> Shop<br>
+				<input name="input4" type="checkbox" placeholder="Poop"> Poop<br>
+				
+				<h2>Enter the following as integers</h2>
+				<input name="input5" type="text" placeholder="Seats"> Seats<br>
+				<input name="input6" type="text" placeholder="Tables"> Tables<br>
+				<input name="input7" type="text" placeholder="Sockets"> Sockets<br>
+				
+				<h2>Check the boxes of the amenities that are available in this study area</h2>
+				<input name="input8" type="checkbox" placeholder="Chairs"> Chairs<br>
+				<input name="input9" type="checkbox" placeholder="Sofas"> Sofas<br>
+				<input name="input10" type="checkbox" placeholder="Tables"> Tables<br>
+				<input name="input11" type="checkbox" placeholder="Sockets"> Sockets<br>
+				<input name="input12" type="checkbox" placeholder="Sockets"> Aircon<br>
+				
+				<h2>Enter overall rating</h2>
+				<input name="input13" type="text" placeholder="Rating"> Rating<br>
+				
+				<h2>Enter image urls</h2>
+				<input name="input14" type="text" placeholder="Image URL"> Image 1<br>
+				<input name="input15" type="text" placeholder="Image URL"> Image 2<br>
+				<input name="input16" type="text" placeholder="Image URL"> Image 3<br>
+				
+
+				
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<div class="add">
+			<h1>Shop</h1>
+			<a href="/">Click this Link to return to SecondHome</a>
+			<form action="/edit-shop" method="post">
+				<h2>Select one of the faculties and <br>enter the name of the area</h2>
+				<select name="select1">
+					<option value="arts and social sciences">Arts and Social Sciences</option>
+					<option value="business">Business</option>
+					<option value="computing">Computing</option>
+					<option value="design and environment">Design and Environment</option>
+					<option value="engineering">Engineering</option>
+					<option value="music">Music</option>
+					<option value="science">Science</option>
+					<option value="utown">Utown</option>
+				</select> Faculty Select<br>
+				<input name="input2" type="text" placeholder="Area"> Area Input<br><br>
+				
+				<h2>Enter the name of the shop/bazaar</h2>
+				<input name="input3" type="text" placeholder="Shop/Bazaar Name"> Shop/Bazaar Name
+				
+				<h2>Check the boxes which have areas nearby to this shopping area</h2>
+				<input name="input4" type="checkbox" placeholder="Study"> Study<br>
+				<input name="input5" type="checkbox" placeholder="Poop"> Poop<br>
+				
+				<h2>Select shop type and enter shop description</h2>
+				<select name="input6" id="select-bazaar">
+					<option id="option-bazaar" value="bazaar">Bazaar</option>
+					<option value="bookshop">Bookshop</option>
+					<option value="food outlet">Food Outlet</option>
+				</select> Shop Type<br><br>
+				<textarea hidden name="input7" rows="5" cols="50" placeholder="Shop description"></textarea><br>
+				
+				<div id="bazaar-form">
+					<input name="dateStart" type="date"> Date Start<br>
+					<input name="dateEnd" type="date"> Date End<br>
+					<input name="time" type="text"> Timing<br>
+				</div>
+				
+				
+				<h2>Enter overall rating</h2>
+				<input name="input8" type="text" placeholder="Rating"> Rating<br>
+				
+				<h2>Enter image urls, one an image of the shop, the other a poster if its a bazaar</h2>
+				<input name="input9" type="text" placeholder="Image URL"> Image 1<br>
+				<input name="input10" type="text" placeholder="Image URL"> Image 2<br>
+				
+				<input type="submit" value="Submit">
+			</form>
+		</div>	
+		<div class="add">
+			<h1>Poop</h1>
+			<a href="/">Click this Link to return to SecondHome</a>
+			<form action="/edit-poop" method="post">
+				<h2>Select one of the faculties and <br>enter the name of the area</h2>
+				<select name="select1">
+					<option value="arts and social sciences">Arts and Social Sciences</option>
+					<option value="business">Business</option>
+					<option value="computing">Computing</option>
+					<option value="design and environment">Design and Environment</option>
+					<option value="engineering">Engineering</option>
+					<option value="music">Music</option>
+					<option value="science">Science</option>
+					<option value="utown">Utown</option>
+				</select> Faculty Select<br>
+				<input name="input2" type="text" placeholder="Area"> Area Input<br><br>
+				
+				<h2>Check the boxes which have areas nearby to this pooping area</h2>
+				<input name="input3" type="checkbox" placeholder="Study"> Study<br>
+				<input name="input4" type="checkbox" placeholder="Shop"> Shop<br>
+				
+				<h2>Enter the following as integers</h2>
+				<input name="input5" type="text" placeholder="Cleanliness Gents"> Cleanliness Gents<br>
+				<input name="input6" type="text" placeholder="Num Urinals"> Num urinals<br>
+				<input name="input7" type="text" placeholder="Rating Gents"> Rating Gents<br>
+				
+				<h2>Enter the following as integers</h2>
+				<input name="input8" type="text" placeholder="Cleanliness Ladies"> Cleanliness Ladies<br>
+				<input name="input9" type="text" placeholder="Num Cubicles"> Num Cubicles<br>
+				<input name="input10" type="text" placeholder="Rating Ladies"> Rating Ladies<br>
+				
+				<h2>Enter image urls, first gents, second ladies</h2>
+				<input name="input11" type="text" placeholder="Image URL"> Image 1<br>
+				<input name="input12" type="text" placeholder="Image URL"> Image 2<br>
+				
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#select-bazaar').change(function() {
+					if ($(this).val() !== 'bazaar') {
+						$('textarea').show();
+						$('#bazaar-form').hide();
+					}
+					else {
+						$('textarea').hide();
+						$('#bazaar-form').show();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

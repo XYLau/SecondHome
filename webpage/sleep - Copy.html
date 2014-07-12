@@ -7,6 +7,7 @@
 		<link type="text/css" rel="stylesheet" href="css/logo-nav.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="css/style-sleep.css"/>
 		<title>SecondHome</title>
   </head>
 
@@ -69,50 +70,20 @@
 
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div id="info">
-						<h3 id="table-faculty">[Name of Faculty]</h3>
-						<table class="table table-hover">
-							<thead>
-								<tr>
-									<th class="col-md-8">Name of Location</th>
-									<th class="col-md-4"></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="clickableRow" href="location.html">
-									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
-								</tr>
-								<tr class="clickableRow" href="location.html">
-									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
-								</tr>
-								<tr class="clickableRow" href="location.html">
-									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
-								</tr>
-								<tr class="clickableRow" href="location.html">
-									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
-								</tr>
-								<tr class="clickableRow" href="location.html">
-									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
-								</tr>
-								<tr class="clickableRow" href="location.html">
-									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
-								</tr>
-								<tr class="clickableRow" href="location.html">
-									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
-								</tr>
-								<tr class="clickableRow" href="location.html">
-									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
-								</tr>
-								<tr class="clickableRow" href="location.html">
-									<td>[Name of Location]</td><td><img src="http://placehold.it/350x150"/></td>
-								</tr>
-								
-								
-							</tbody>
-						</table>
-					</div>
+			<div class="row row-table">
+				<div class="col-md-7">
+					<p>Name of Location</p>
+				</div>
+				<div class="col-md-5">
+					<img src="http://placehold.it/460x300"/>
+				</div>
+			</div>
+			<div class="row row-table">
+				<div class="col-md-7">
+					<p>Name of Location</p>
+				</div>
+				<div class="col-md-5">
+					<img src="http://placehold.it/460x300"/>
 				</div>
 			</div>
 		</div>
@@ -136,32 +107,6 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/script.js"></script>
 		<script src="js/contentHover.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$('#d1, #d2, #d3, #d4').contenthover({
-					overlay_background:'gold',
-					overlay_opacity:1.0
-				});
-				
-				$('#info').hide();
-				
-				$('#select-faculty').validate({ 
-					submitHandler: function(form) {
-						var $info = $('#info');
-						$info.slideDown(400, function() {
-							$('html, body').animate({ 
-								scrollTop: $info.offset().top - 70
-							}, 500);
-						});
-					
-					}
-				});
-				$(".clickableRow").click(function() {
-					window.document.location = $(this).attr("href");
-				});
-				
-			});
-		</script>
 		<script src="dist/jquery.validate.js"></script>
   </body>
 
